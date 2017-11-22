@@ -1,0 +1,124 @@
+:host {
+    overflow-y: auto;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    .container-left {
+        width: 300px;
+        min-width: 300px;
+        padding-top: 0px;
+        border-right: 1px solid #e4eaec;
+        position: relative;
+        background: #fff;
+        margin-left: -15px;
+        display: block;
+    }
+    .container-center {
+        padding: 10px;
+        background: #ccc;
+        position: relative;
+        .ibox-content {
+            background: #ffffff;
+        }
+    }
+    .container-right {
+        flex: 1;
+        padding-top: 10px;
+        border-left: 1px solid #e4eaec;
+        background: #fff;
+        position: fixed;
+        right: 0px;
+        z-index: 9999;
+        top: 0px;
+        bottom: 0px;
+        width: 450px;
+        overflow: auto;
+        display: none;
+        &.show {
+            display: block;
+        }
+        td {
+            max-width: 15em;
+        }
+    }
+}
+
+.aside-title {
+    padding: 10px 20px;
+    overflow: hidden;
+    font-weight: 400;
+    color: #526069;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.aside {
+    &:after {
+        position: relative;
+        display: block;
+        margin: 11px;
+        content: "";
+        border-bottom: 1px solid #e4eaec;
+    }
+    .list-group-item {
+        border: none;
+        &:hover {
+            background-color: #e4eaec;
+        }
+    }
+}
+
+.line {
+    &:after {
+        position: relative;
+        display: block;
+        margin: 11px;
+        content: "";
+        border-bottom: 1px solid #e4eaec;
+        clear: both;
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.widget-container {
+    margin: 5px;
+    padding: 5px;
+    .btn {
+        margin: 3px;
+    }
+}
+
+.footer-save {
+    bottom: 10px;
+    left: 200px;
+    right: 200px;
+    display: flex;
+    flex-direction: row;
+    .btn {
+        flex: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.btn-disable {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: .65;
+}
+
+.widget-container {
+    display: block;
+    overflow-y: auto;
+}

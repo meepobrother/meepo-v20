@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-4" *ngFor="let item of list">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>{{item?.title}}</h5>
+                <div class="ibox-tools">
+                    <a class="btn btn-danger btn-xs btn-bitbucket" style="color:#fff;">
+                        <i class="fa fa-cart-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-xs btn-bitbucket" style="color:#fff;">
+                        <i class="fa fa-heart-o"></i>
+                    </a>
+                    <a class="btn btn-white btn-xs btn-bitbucket">
+                        <i class="fa fa-qrcode"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="ibox-content no-padding border-left-right">
+                    <!-- <img alt="image" class="img-responsive" src="./assets/img/profile_big.jpg"> -->
+                </div>
+                <div class="ibox-content profile-content">
+                    <!-- <p>价格： <span style="color: red;">{{item.price}}</span></p> -->
+                    <p>token: <span style="color: gray;">{{item.token}}</span></p>
+                    <p>作者: <span style="color: green;">{{item.author}}</span></p>
+                    <div class="user-button" style="margin-top: 15px;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" class="btn btn-primary btn-sm btn-block" (click)="useTheme(item)"><i class="fa fa-coffee"></i> 使用</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<blank *ngIf="list.length<=0" title="还没有任何主题">
+    敬请关注！
+</blank>

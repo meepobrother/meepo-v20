@@ -1,0 +1,9 @@
+<div [attr.id]="widget.code" class="swiper-container swiper-container-horizontal">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide bannerbox" *ngFor="let item of widget.children">
+            <a href="javascript:;">
+                <img [src]="item.image">
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="meepo-tabs" #panel>
+    <div class="meepo-tabs_wrap" [style.width.em]="widget.items.length * 5">
+        <div class="meepo-tabs_item" *ngFor="let item of widget.items"><span>{{item.title}}</span></div>
+    </div>
+</div>

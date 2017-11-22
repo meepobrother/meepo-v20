@@ -1,0 +1,27 @@
+<div class="ibox">
+    <div class="ibox-title">
+        <h5>商品管理</h5>
+        <div class="ibox-tools">
+            <a class="btn btn-primary btn-xs" (click)="clearCache()">清空缓存</a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <nav-tabs>
+            <nav-tab-pane title="商品">
+                <ng-template navTabPaneRef>
+                    <goods-list></goods-list>
+                </ng-template>
+            </nav-tab-pane>
+            <nav-tab-pane title="商品分组">
+                <ng-template navTabPaneRef>
+                    <goods-group></goods-group>
+                </ng-template>
+            </nav-tab-pane>
+            <nav-tab-pane title="商品标签">
+                <ng-template navTabPaneRef>
+                    <goods-tags></goods-tags>
+                </ng-template>
+            </nav-tab-pane>
+        </nav-tabs>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.ibox {
+    &:after {
+        position: relative;
+        display: block;
+        margin: 11px;
+        content: "";
+        border-bottom: 1px solid #e4eaec;
+        clear: both;
+    }
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+    label {
+        margin: 5px 10px;
+        cursor: pointer;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

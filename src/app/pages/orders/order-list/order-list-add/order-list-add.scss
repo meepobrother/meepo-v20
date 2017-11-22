@@ -1,0 +1,64 @@
+.btn {
+    margin: 5px;
+}
+
+:host {
+    width: 600px;
+    height: 700px;
+    display: block;
+    overflow: auto;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    li {
+        height: 44px;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        &.on {
+            color: red;
+            span {
+                background: red;
+            }
+        }
+        span {
+            display: block;
+            padding: 5px;
+            background: gray;
+            border-radius: 50%;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.order-list-add-opts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.content-header {
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

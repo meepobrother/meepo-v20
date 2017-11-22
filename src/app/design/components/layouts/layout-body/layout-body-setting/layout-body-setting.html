@@ -1,0 +1,13 @@
+<div class="ibox-content">
+    <form-field group="true">
+        <span class="label" left>
+            背景颜色
+        </span>
+        <input type="color" meepoInput [(ngModel)]="widget.containerStyle['background-color']">
+    </form-field>
+
+    <div class="form-group" style="margin-top: 10px;">
+        <a href="javascript:;" class="btn btn-primary" (click)="clear()">清空</a>
+    </div>
+</div>
+<div class="ibox-title"></div>

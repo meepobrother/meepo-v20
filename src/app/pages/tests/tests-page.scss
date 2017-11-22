@@ -1,0 +1,37 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.panel-body,
+.ibox-content {
+    img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.btn {
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video-list {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background: #fff;
+    video-item {
+        width: 320px;
+        display: block;
+        margin: 5px;
+    }
+}

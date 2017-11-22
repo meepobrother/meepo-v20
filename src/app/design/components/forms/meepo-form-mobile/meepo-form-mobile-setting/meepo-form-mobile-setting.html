@@ -1,0 +1,38 @@
+<div class="ibox-title">
+    容器样式
+</div>
+<div class="ibox-content">
+    <setting-container-margin [(widget)]="widget.containerStyle"></setting-container-margin>
+    <setting-container-padding [(widget)]="widget.containerStyle"></setting-container-padding>
+    <setting-container-color [(widget)]="widget.containerStyle"></setting-container-color>
+</div>
+
+<div class="ibox-title">
+    <h5>基础设置</h5>
+    <div class="ibox-tools">
+        <label>是否显示验证码</label>
+        <input type="checkbox" [(ngModel)]="widget.hasCode" />
+    </div>
+</div>
+<div class="ibox-content">
+    <div class="form-group">
+        <div class="input-group m0 p0">
+            <input class="form-control" type="text" [(ngModel)]="widget.data.mobile.label" placeholder="电话-label">
+            <div class="input-group-addon">
+                <input class="form-control" type="color" [(ngModel)]="widget.data.mobile.color">
+            </div>
+        </div>
+        <input class="form-control" type="text" [(ngModel)]="widget.data.mobile.placeholder" placeholder="电话-placeholder">
+        <input class="form-control" type="text" [(ngModel)]="widget.data.mobile.tip" placeholder="电话-tip">
+    </div>
+
+    <div class="form-group" *ngIf="widget.hasCode">
+        <div class="input-group m0 p0">
+            <input class="form-control" type="text" [(ngModel)]="widget.data.code.label" placeholder="验证码-label">
+            <div class="input-group-addon">
+                <input class="form-control" type="color" [(ngModel)]="widget.data.code.color">
+            </div>
+        </div>
+        <input class="form-control" type="text" [(ngModel)]="widget.data.code.placeholder" placeholder="验证码-placeholder">
+    </div>
+</div>

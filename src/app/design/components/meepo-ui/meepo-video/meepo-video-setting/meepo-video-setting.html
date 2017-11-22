@@ -1,0 +1,29 @@
+<div class="ibox-title">
+    容器样式
+</div>
+<div class="ibox-content">
+    <setting-container-margin [(widget)]="widget.containerStyle"></setting-container-margin>
+    <setting-container-padding [(widget)]="widget.containerStyle"></setting-container-padding>
+    <setting-container-color [(widget)]="widget.containerStyle"></setting-container-color>
+
+    <div class="form-group">
+        <label>高度</label>
+        <number-px [(model)]="widget.containerStyle['height']"></number-px>
+    </div>
+
+    <div class="form-group">
+        <a class="btn " [class.btn-default]="!widget.fixed" [class.btn-primary]="widget.fixed" (click)="setFlexd()">固定在顶部</a>
+    </div>
+</div>
+
+<div class="ibox">
+    <div class="ibox-title">
+        视频设置
+    </div>
+    <div class="ibox-content">
+        <div class="form-group">
+            <label>视频地址</label>
+            <input type="text" class="form-control" [(ngModel)]="widget.videoUrl" placeholder="请输入视频地址">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="weui-wepay-flow">
+    <div class="weui-wepay-flow__bd">
+        <div class="weui-wepay-flow__li " [class.weui-wepay-flow__line_ing]="item.status == 1" [class.weui-wepay-flow__li_done]="item.status == 2" *ngFor="let item of widget.flows;index as i;">
+            <div class="weui-wepay-flow__state">{{i}}</div>
+            <p class="weui-wepay-flow__title-bottom">{{item.title}}</p>
+        </div>
+    </div>
+</div>

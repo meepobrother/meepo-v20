@@ -1,0 +1,48 @@
+<div class="ibox-title">
+    容器样式
+</div>
+<div class="ibox-content">
+    <setting-container-margin [(widget)]="widget.containerStyle"></setting-container-margin>
+    <setting-container-padding [(widget)]="widget.containerStyle"></setting-container-padding>
+    <setting-container-color [(widget)]="widget.containerStyle"></setting-container-color>
+</div>
+
+<div class="ibox">
+    <div class="ibox-title">
+        按钮设置
+    </div>
+    <div class="ibox-content">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="widget.content" placeholder="标题">
+                <div class="input-group-addon" (click)="selectIcon()">
+                    <i [ngClass]="widget.icon"></i> 图标
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="widget.__do" placeholder="提交地址">
+                <div class="input-group-addon" (click)="selectDo()">
+                    地址
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>提交成功提示</label>
+            <textarea rows="3" class="form-control" [(ngModel)]="widget.__post['success']" placeholder="请输入提交成功提示"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="widget.success" placeholder="成功后跳转后链接">
+                <div class="input-group-addon" (click)="selectPage()">
+                    选择
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="tasks-list" [ngStyle]="widget.containerStyle">
+    <div class="tasks-item hvr-box-shadow-outset" *ngFor="let item of tasks" [ngStyle]="widget.itemStyle">
+        <div class="tasks-item-avatar"><img [src]="item.avatar" alt="">
+            <div class="tasks-item-nickname">{{item.nickname}}</div>
+        </div>
+        <div class="tasks-item-content">
+            <div class="tasks-item-title">{{item.tag}}</div>
+            <div class="tasks-item-desc">
+                {{item.message}}
+            </div>
+            <div class="tasks-item-tags">
+                <ul>
+                    <li>
+                        <i class="fa fa-android"></i> {{item.receiveaddress}}
+                    </li>
+                    <li>
+                        <i class="fa fa-clock-o"></i> {{item.pickupdate}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

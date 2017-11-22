@@ -1,0 +1,25 @@
+//  <link rel="stylesheet" href="./assets/css/animate.css">
+// <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+// <link rel="stylesheet" href="./assets/css/font-awesome.css">
+// <link rel="stylesheet" href="./assets/css/style.css">
+@import "./css/animate.css";
+@import "./css/bootstrap.min.css";
+// 字体图标
+@import "./css/font-awesome.css";
+@import "./iconfont.scss";
+@import "./web-icon.scss";
+@import "./css/style.css";
+@import "./toastr.scss";
+@import "./themify.scss";
+@import "./pc_icomoon.scss";
+@import "../themes/hover/hover.scss";
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}

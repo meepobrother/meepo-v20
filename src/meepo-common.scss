@@ -1,0 +1,285 @@
+.meepo_picker-container {
+    position: absolute !important;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+@import "./meepo/reset.scss";
+@import "./meepo/layout.scss";
+@import "./meepo/swiper.scss";
+// weuipay
+@import "./app/themes/weuipay.scss";
+@import "./meepo-zan.scss";
+@import "./meepo-canlendar.scss";
+container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+}
+
+video:focus,
+video:active {
+    outline: none;
+}
+
+.chimee-container {
+    position: relative;
+}
+
+.time-ad {
+    background-color: transparent;
+    border: 0;
+}
+
+.time-ad img {
+    display: block;
+    width: 30px;
+}
+
+.time-ad em {
+    position: absolute;
+    right: -7px;
+    top: 35px;
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(156, 85, 85, 0.66);
+    padding: 0 3px;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.time-ad cm-pp-close {
+    display: none;
+}
+
+.time-ad cm-pp-body {
+    padding: 0;
+}
+
+.w_tag {
+    background: white;
+    padding: 0px 3%;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    a {
+        float: left;
+        text-align: center;
+        color: #5b4428;
+        font-size: 13px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+}
+
+.marbot10 {
+    margin-bottom: 5.5px;
+}
+
+.marbot20 {
+    margin-bottom: 11px;
+}
+
+.tab_btn {
+    background: #f5f5f5;
+    height: 31px;
+    width: auto;
+    padding: 0 10px;
+    margin-right: 2.6%;
+    line-height: 31px;
+    position: relative;
+    -webkit-border-radius: 2.8px;
+    border-radius: 2.8px;
+    &.on {
+        color: #f16649;
+        border: 1px solid #f16649;
+        background: #fff;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-size: 100% 100%;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+.layim-chat-li{
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 0px;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 10px;
+  min-height: 68px;
+  overflow: hidden;
+  &:after{
+    clear: both;
+  }
+  .layim-chat-user{
+    position: absolute;
+    right: auto;
+    left: 3px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    cite {
+      right: auto;
+      left: 60px;
+      text-align: left;
+      position: absolute;
+      top: -2px;
+      width: 500px;
+      line-height: 24px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #999;
+      font-style: normal;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+  }
+  .layim-chat-text {
+    margin-left: 0;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    min-height: 22px;
+    line-height: 22px;
+    margin-top: 25px;
+    padding: 8px 15px;
+    border-radius: 3px;
+    word-break: break-all;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 13px;
+      width: 0;
+      height: 0;
+      border-style: solid dashed dashed;
+      border-color: #fff transparent transparent;
+      overflow: hidden;
+      border-width: 10px;
+    }
+  }
+}
+
+.layim-chat-mine{
+  text-align: right;
+  padding-left: 0;
+  padding-right: 60px;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 10px;
+  min-height: 68px;
+  &:after{
+    clear: both;
+  }
+  .layim-chat-user{
+    position: absolute;
+    left: auto;
+    right: 3px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    cite {
+      left: auto;
+      right: 60px;
+      text-align: right;
+      position: absolute;
+      top: -2px;
+      width: 500px;
+      line-height: 24px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #999;
+      font-style: normal;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+  }
+  .layim-chat-text {
+    margin-left: 0;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    min-height: 22px;
+    line-height: 22px;
+    margin-top: 25px;
+    padding: 8px 15px;
+    border-radius: 3px;
+    word-break: break-all;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    &:after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 13px;
+      width: 0;
+      height: 0;
+      border-style: solid dashed dashed;
+      border-color: #fff transparent transparent;
+      overflow: hidden;
+      border-width: 10px;
+    }
+  }
+}
+
+.layim-chat-system {
+  min-height: 0;
+  margin: 20px 0 5px;
+  padding: 0;
+  osition: relative;
+  font-size: 0;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  span {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 15px;
+    border-radius: 3px;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

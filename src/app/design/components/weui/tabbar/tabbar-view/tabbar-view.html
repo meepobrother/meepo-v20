@@ -1,0 +1,9 @@
+<div class="weui-tabbar">
+    <a href="javascript:;" (click)="onClick(item)" *ngFor="let item of widget.content" [class.weui-bar__item_on]="item.active" class="weui-tabbar__item ">
+        <span style="display: inline-block;position: relative;">
+            <img [src]="item.icon" class="weui-tabbar__icon">
+            <span *ngIf="item.badge>0" class="weui-badge" style="position: absolute;top: -2px;right: -13px;">{{item.badge}}</span>
+        </span>
+        <p class="weui-tabbar__label">{{item.title}}</p>
+    </a>
+</div>

@@ -1,0 +1,33 @@
+<div class="ibox">
+    <div class="ibox-title">
+        基础设置
+    </div>
+    <div class="ibox-content">
+        <h5>背景图片</h5>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <img style="height: 20px;" [src]="widget.bgImg"/>
+                </div>
+                <input class="form-control" [(ngModel)]="widget.bgImg" placeholder="选择图片" type="text" readonly/>
+                <div class="input-group-addon">
+                    选择
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <tr *ngFor="let item of widget.items">
+                <td>{{item.title}}</td>
+                <td>{{item.num}}</td>
+                <td>
+                    <a [attr.href]="item.link" class="btn btn-primray btn-xs">链接</a>
+                </td>
+                <td>
+                    <a href="javascript:;" class="btn btn-primary btn-xs">编辑</a>
+                    <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+                </td>                
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="swiper-container" #container [ngStyle]="widget.containerStyle">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of widget.children" [style.height.px]="widget.styleObj['height']">
+            <img [src]="item.image" alt="">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="water">
+        <div class="water-c">
+            <div class="water-1"></div>
+            <div class="water-2"></div>
+        </div>
+    </div>
+</div>
