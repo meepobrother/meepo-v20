@@ -31,7 +31,6 @@ import { ElBreadcrumbsModule } from './breadcrumb/module'
 import { ElDateModule } from './date-picker/module'
 import { ElSliderModule } from './slider/module'
 import { ElDialogModule } from './dialog/module'
-import { ElCarouselModule } from './carousel/module'
 import { ElCollapseModule } from './collapse/module'
 import { ElAlertModule } from './alert/module'
 import { ElPaginationModule } from './pagination/module'
@@ -44,7 +43,7 @@ export const ElChildModules: any = {
   ElColModule, ElCheckboxsModule, ElInputsModule, ElInputNumberModule, ElTagsModule, ElSelectModule,
   ElSwitchModule, ElRateModule, ElProgressModule, ElStepsModule, ElLoadingModule, ElMessagesModule,
   ElSharedModule, ElNotificationModule, ElCascaderModule, ElBadgesModule, ElCardsModule, ElDropdownModule,
-  ElBreadcrumbsModule, ElDateModule, ElSliderModule, ElDialogModule, ElCarouselModule, ElCollapseModule,
+  ElBreadcrumbsModule, ElDateModule, ElSliderModule, ElDialogModule, ElCollapseModule,
   ElAlertModule, ElPaginationModule, ElUploadModule, ElTableModule, ElContainerModule,
 }
 export const ELMODULES_GROUP: any[] = [
@@ -52,7 +51,7 @@ export const ELMODULES_GROUP: any[] = [
   ElColModule, ElCheckboxsModule, ElInputsModule, ElInputNumberModule, ElTagsModule, ElSelectModule,
   ElSwitchModule, ElRateModule, ElProgressModule, ElStepsModule, ElLoadingModule, ElMessagesModule,
   ElSharedModule, ElNotificationModule, ElCascaderModule, ElBadgesModule, ElCardsModule, ElDropdownModule,
-  ElBreadcrumbsModule, ElDateModule, ElSliderModule, ElDialogModule, ElCarouselModule, ElCollapseModule,
+  ElBreadcrumbsModule, ElDateModule, ElSliderModule, ElDialogModule, ElCollapseModule,
   ElAlertModule, ElPaginationModule, ElUploadModule, ElTableModule, ElContainerModule,
 ]
 
@@ -66,7 +65,7 @@ export const ELMODULES_GROUP: any[] = [
     ElLoadingModule.forRoot(), ElMessagesModule.forRoot(), ElSharedModule.forRoot(), ElNotificationModule.forRoot(),
     ElCascaderModule.forRoot(), ElBadgesModule.forRoot(), ElCardsModule.forRoot(), ElDropdownModule.forRoot(),
     ElBreadcrumbsModule.forRoot(), ElDateModule.forRoot(), ElSliderModule.forRoot(), ElDialogModule.forRoot(),
-    ElCarouselModule.forRoot(), ElCollapseModule.forRoot(), ElAlertModule.forRoot(), ElPaginationModule.forRoot(),
+    , ElCollapseModule.forRoot(), ElAlertModule.forRoot(), ElPaginationModule.forRoot(),
     ElUploadModule.forRoot(), ElTableModule.forRoot(), ElContainerModule.forRoot(),
   ],
   exports: ELMODULES_GROUP,
