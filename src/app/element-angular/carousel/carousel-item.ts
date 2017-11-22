@@ -21,33 +21,33 @@ import { removeNgTag } from '../shared/utils'
   `,
 })
 export class ElCarouselItem implements OnInit {
-  
+
   // parent component will set index
   @Input() index: number
   @Input() label: string = ''
-  
+
   // oninit set
   width: number
-  
+
   preTranslate: number
   isAnimating: boolean
   isActive: boolean = false
   styles: SafeStyle
-  
+
   constructor(
     @Inject(forwardRef(() => ElCarousel)) public root: ElCarousel,
     private sanitizer: DomSanitizer,
     private el: ElementRef,
   ) {
   }
-  
+
   updateActive(): void {
     const isActive: boolean = this.root.model === this.index
     if (this.isActive !== isActive) {
       this.isActive = isActive
     }
   }
-  
+
   updateStyles(): void {
     const map: any = {
       '1': 0 - this.width,
@@ -67,22 +67,22 @@ export class ElCarouselItem implements OnInit {
     // save current value
     this.preTranslate = translate
   }
-  
+
   update(): void {
     this.updateStyles()
     this.updateActive()
   }
-  
+
   ngOnInit(): void {
     // collect items
     this.root.items.push(this.label)
     this.width = this.el.nativeElement.children[0].offsetWidth
     removeNgTag(this.el.nativeElement)
-    
+
     // manually update
     this.root.subscriber.push(() => this.update())
     this.update()
   }
-  
+
 }
 

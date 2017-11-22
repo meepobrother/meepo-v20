@@ -3,7 +3,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DOCUMENT } from '@angular/common';
 import { Subject } from 'rxjs/Subject';
 
-
 @Component({
     selector: 'editor',
     templateUrl: './editor.html',

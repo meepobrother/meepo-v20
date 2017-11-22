@@ -1,10 +1,10 @@
 import {
   AfterViewInit, Component, ContentChildren, forwardRef,
   OnChanges, OnDestroy, QueryList, SimpleChanges,
-} from '@angular/core'
-import { ElCarouselItem } from './carousel-item'
-import { ElCarouselProps } from './carousel-props'
-import { carouselBtnLeftAnimation, carouselBtnRightAnimation } from './animations'
+} from '@angular/core';
+import { ElCarouselItem } from './carousel-item';
+import { ElCarouselProps } from './carousel-props';
+import { carouselBtnLeftAnimation, carouselBtnRightAnimation } from './animations';
 
 @Component({
   selector: 'el-carousel',
@@ -51,30 +51,32 @@ import { carouselBtnLeftAnimation, carouselBtnRightAnimation } from './animation
   `,
 })
 export class ElCarousel extends ElCarouselProps implements AfterViewInit, OnChanges, OnDestroy {
-  
+
   @ContentChildren(forwardRef(() => ElCarouselItem)) children: QueryList<ElCarouselItem>
-  subscriber: Function[] = []
-  items: any[] = []
-  hasLabel: boolean = false
-  timer: any
-  
+  subscriber: Function[] = [];
+  items: any[] = [];
+  hasLabel: boolean = false;
+  timer: any;
+
   constructor(
   ) {
     super()
   }
-  
+
   btnActionHandle(nextValue: number, eventType: string): void {
-    if (this.trigger !== eventType) return
-    this.autoplay && this.resetInterval()
-    this.setActiveItem(nextValue)
+    if (this.trigger !== eventType) {
+      return;
+    }
+    this.autoplay && this.resetInterval();
+    this.setActiveItem(nextValue);
   }
-  
+
   indicatorActionHandle(nextValue: number, eventType: string): void {
     if (this.indicatorTrigger !== eventType) return
     this.autoplay && this.resetInterval()
     this.setActiveItem(nextValue)
   }
-  
+
   setActiveItem(index: number): void {
     const len = this.children.length
     const nextValue = index >= len ? 0 : index < 0 ? len - 1 : index
@@ -82,14 +84,14 @@ export class ElCarousel extends ElCarouselProps implements AfterViewInit, OnChan
     this.subscriber.forEach(func => func())
     this.modelChange.emit(this.model)
   }
-  
+
   resetInterval(): void {
     this.timer && clearInterval(this.timer)
     this.timer = setInterval(() => {
       this.setActiveItem(this.model + 1)
     }, this.interval)
   }
-  
+
   ngAfterViewInit(): void {
     const timer = setTimeout(() => {
       this.children.forEach((item, index) => {
@@ -104,13 +106,13 @@ export class ElCarousel extends ElCarouselProps implements AfterViewInit, OnChan
       clearTimeout(timer)
     }, 0)
   }
-  
+
   ngOnChanges(changes: SimpleChanges): void {
     // not include model
     if (!changes || !changes.model) return
     this.setActiveItem(changes.model.currentValue)
   }
-  
+
   ngOnDestroy(): void {
     this.timer && clearInterval(this.timer)
   }
