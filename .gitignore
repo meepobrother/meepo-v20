@@ -6,6 +6,8 @@
 /out-tsc
 
 package.json
+package-copy.json
+
 
 # dependencies
 /node_modules
