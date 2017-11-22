@@ -1,1 +1,0 @@
-export * from './good-tag-select';

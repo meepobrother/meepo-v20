@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SidebarContainerService } from '../../sidebar/sidebar-container.service';
 import { DropdownsService } from '../../dropdown/dropdowns.service';
 import { Router } from '@angular/router';
@@ -12,9 +12,9 @@ import { CatalogService } from '../../share/services/catalog.service';
 @Component({
     selector: 'main-layout',
     templateUrl: './main-layout.html',
-    styleUrls: ["./main-layout.scss"]
+    styleUrls: ['./main-layout.scss']
 })
-export class MainLayoutComponent implements OnInit {
+export class MainLayoutComponent implements OnInit, OnDestroy {
     menus: any[] = [
         {
             title: '门店',
@@ -136,7 +136,7 @@ export class MainLayoutComponent implements OnInit {
 
     avatarStyle: any = {
         'min-width': '2em'
-    }
+    };
 
     widget: WidgetService;
     service: CatalogService;
@@ -172,7 +172,7 @@ export class MainLayoutComponent implements OnInit {
                     };
                     this.avatarStyle = {
                         'min-width': '2em'
-                    }
+                    };
                 }
             } else {
                 this.openStyle.content = {
@@ -183,7 +183,7 @@ export class MainLayoutComponent implements OnInit {
                     'min-width': '2em'
                 };
             }
-        })
+        });
     }
 
     getMyApp() {
@@ -201,17 +201,17 @@ export class MainLayoutComponent implements OnInit {
             this.openStyle.content = {
                 'padding-left': '100px',
                 'padding-right': '160px'
-            }
+            };
         }
         if (!this.showMenu) {
             this.timer = setInterval(() => {
-                const isLogin = store.get('isLogin');
+                const isLogin = store.get('isLogin', false);
                 if (isLogin) {
                     this.showMenu = true;
                     this.openStyle.content = {
                         'padding-left': '100px',
                         'padding-right': '160px'
-                    }
+                    };
                     clearInterval(this.timer);
                 }
             }, 1000);
@@ -238,21 +238,24 @@ export class MainLayoutComponent implements OnInit {
         this.myapps.map((app: any) => {
             app.catalogs.map((catalog: any) => {
                 catalog.pages.map((page: any) => {
-                    if (page.id == index) {
-                        setTimeout(()=>{
+                    if (page.id === index) {
+                        setTimeout(() => {
                             this.widget.setCurrentWidget(page);
                             this.service.clickCataPage(catalog, page);
-                        },300)
-                        this.router.navigate(['/themes/design/',app.id]);                        
+                        }, 300);
+                        this.router.navigate(['/themes/design/', app.id]);
                     }
                 });
             });
         });
     }
-}
 
-
-
-export class openContentStyle {
-
+    ngOnDestroy() {
+        this.myapps = [];
+        this.dropdowns$ = null;
+        this.sidebar$.onOpen.unsubscribe();
+        this.widget = null;
+        this.service = null;
+        this.myinfo = null;
+    }
 }

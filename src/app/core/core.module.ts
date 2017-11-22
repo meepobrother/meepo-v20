@@ -8,11 +8,6 @@ import { DropdownModule } from '../dropdown/dropdown.module';
 import { TopnavModule } from '../topnav/topnav.module';
 
 import { MainLayoutComponent } from './main-layout/main-layout';
-import { ShopTagSelect } from './shop-tag-select';
-import { ShopGroupSelect } from './shop-group-select';
-
-import { GoodTagSelect } from './good-tag-select';
-import { GoodGroupSelect } from './good-group-select';
 
 
 import { StylesModule } from '../styles';
@@ -57,22 +52,14 @@ const modules = [
 
 @NgModule({
     declarations: [
-        MainLayoutComponent,
-        ShopTagSelect,
-        ShopGroupSelect,
-        GoodTagSelect,
-        GoodGroupSelect
+        MainLayoutComponent
     ],
     imports: [
         ...modules
     ],
     exports: [
         ...modules,
-        MainLayoutComponent,
-        ShopTagSelect,
-        ShopGroupSelect,
-        GoodTagSelect,
-        GoodGroupSelect
+        MainLayoutComponent
     ],
     providers: [
         LoginService,
