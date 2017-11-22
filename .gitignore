@@ -6,6 +6,8 @@
 /out-tsc
 
 package.json
+.angular-cli.json
+
 package-copy.json
 
 
